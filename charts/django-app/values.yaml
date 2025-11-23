@@ -9,7 +9,7 @@
 # Docker image configuration
 image:
   repository: 671334746049.dkr.ecr.eu-north-1.amazonaws.com/project-django-app
-  tag: v1.0.1
+  tag: v1.0.2
   pullPolicy: Always
 
 # Replicas configuration (reduced for t3.micro)
