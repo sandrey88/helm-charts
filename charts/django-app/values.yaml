@@ -26,7 +26,7 @@ ingress:
 
 # HPA (Horizontal Pod Autoscaler) configuration
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 2
   maxReplicas: 5
   targetCPUUtilizationPercentage: 80
@@ -42,14 +42,14 @@ resources:
 
 # PostgreSQL dependency (Bitnami chart)
 postgresql:
-  enabled: true
+  enabled: false
   auth:
     username: django
     password: django123
     database: djangodb
   primary:
     persistence:
-      enabled: true
+      enabled: false
       storageClass: "ebs-sc"
       size: 10Gi
     resources:
@@ -69,5 +69,5 @@ config:
   DATABASE_NAME: "djangodb"
   DATABASE_USER: "django"
   DATABASE_PASSWORD: "django123"
-  DATABASE_HOST: "django-app-postgresql"
+  DATABASE_HOST: "project-django-db.c1s4uyaeihzc.eu-north-1.rds.amazonaws.com"
   DATABASE_PORT: "5432"
